@@ -43,7 +43,7 @@ public class Application {
 //			Address addr = new Address("My address", "A1B2C3");
 //			Customer cust = new Customer("Abigail", "Smith", addr);
 
-			LeaveRecord leave = new LeaveRecord("Abigail Smith","Vacation","01-May-2018", "01-May-2018", "Approved");
+			LeaveRecord leave = new LeaveRecord("Abigail Smith","Vacation","01-May-2018", "01-May-2018", "Approved","Demo");
 			//leave.setCustomer(cust);
 			
 			repository.save(leave);  

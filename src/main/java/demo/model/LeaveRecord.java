@@ -19,19 +19,29 @@ public class LeaveRecord implements Serializable{
     private String startDate;
     private String endDate;
     private String status;
+    private String comments;
     
 //    @OneToOne(cascade = CascadeType.PERSIST , fetch=FetchType.EAGER)
 //    @JoinColumn(name = "customer_id")
 //    private Customer customer;
     
-    protected LeaveRecord() {}
+    public String getComments() {
+		return comments;
+	}
 
-    public LeaveRecord(String empId, String type, String start, String end, String status) {
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	protected LeaveRecord() {}
+
+    public LeaveRecord(String empId, String type, String start, String end, String status, String comments) {
     	this.empId=empId;
     	this.type=type;
     	this.startDate=start;
     	this.endDate=end;
     	this.status=status;
+    	this.comments=comments;
     }
 
 	public String getEmpId() {
