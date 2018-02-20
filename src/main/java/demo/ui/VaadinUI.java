@@ -39,8 +39,14 @@ public class VaadinUI extends UI {
 		for (LeaveRecord leave : repo.findAll()) {
 			leaves.add(leave);
 		}
-	    grid.setContainerDataSource(
-	            new BeanItemContainer(LeaveRecord.class, leaves));
+		
+		BeanItemContainer container = new BeanItemContainer(LeaveRecord.class, leaves);
+		System.out.println(container.getContainerPropertyIds()); 
+		
+	    grid.setContainerDataSource(container);
+		//System.out.println(grid.getColumns());
+	    grid.setColumnOrder("id","empId","type","startDate","endDate","comments","status");
+		
 	}
 	
 }
